@@ -1,0 +1,74 @@
+/* Configurações Gerais e Cores */
+:root {
+    --primary-color: #2e7d32;     /* Verde Escuro (Agro/Natureza) */
+    --secondary-color: #4caf50;   /* Verde Claro */
+    --accent-color: #d32f2f;      /* Vermelho para Alertas/Destaques */
+    --text-dark: #263238;         /* Cinza Escuro para textos */
+    --bg-light: #f4f7f4;          /* Fundo acinzentado esverdeado leve */
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho / Banner */
+.main-header {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.main-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.main-header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.badge {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Introdução */
+.intro-section {
+    padding: 40px 20px;
+    background: var(--white);
+    margin-top: -30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.intro-section
