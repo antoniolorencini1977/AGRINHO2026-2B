@@ -1,4 +1,6 @@
-/* RESET E ESTILOS BÁSICOS */
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -19,97 +21,103 @@ body {
     padding: 0 20px;
 }
 
-/* HEADER */
+/* ==========================================================================
+   HEADER / TOPO DO SITE
+   ========================================================================== */
 header {
-    background: linear-gradient(135deg, #1e4620 0%, #2e7d32 100%);
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
     color: #ffffff;
-    padding: 50px 0;
+    padding: 60px 0;
     text-align: center;
-    border-bottom: 5px solid #81c784;
+    border-bottom: 6px solid #52b788;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    margin-bottom: 12px;
     font-weight: 800;
     letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 header .subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 700px;
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 750px;
     margin: 0 auto;
 }
 
 .badge {
-    background-color: #81c784;
-    color: #1e4620;
-    padding: 6px 12px;
+    background-color: #52b788;
+    color: #1b4332;
+    padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* INTRO CARD */
+/* ==========================================================================
+   CARDS E SEÇÕES INTERNAS
+   ========================================================================== */
 .intro-card {
     background: #ffffff;
-    padding: 30px;
+    padding: 35px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    margin: 30px 0;
-    border-left: 5px solid #2e7d32;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    margin: 40px 0;
+    border-left: 6px solid #2d6a4f;
 }
 
 .intro-card h2 {
-    color: #1e4620;
+    color: #1b4332;
     margin-bottom: 15px;
 }
 
-/* ESTRUTURA DE PROJETOS */
 .project-section {
     background: #ffffff;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     margin-bottom: 40px;
+    border: 1px solid #e2e8f0;
 }
 
 .project-header {
     display: flex;
     align-items: center;
     gap: 15px;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid #edf2f7;
     padding-bottom: 15px;
     margin-bottom: 25px;
 }
 
 .project-number {
-    background-color: #2e7d32;
+    background-color: #2d6a4f;
     color: #ffffff;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 6px;
     font-weight: bold;
     font-size: 0.9rem;
 }
 
 .project-header h2 {
-    color: #1e4620;
-    font-size: 1.6rem;
+    color: #1b4332;
+    font-size: 1.7rem;
 }
 
 h3 {
-    color: #2e7d32;
+    color: #2d6a4f;
     margin: 20px 0 10px 0;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 
 h4 {
-    color: #1e4620;
-    margin-bottom: 5px;
+    color: #1b4332;
+    margin-bottom: 8px;
 }
 
 p {
@@ -118,68 +126,179 @@ p {
     text-align: justify;
 }
 
-/* LAYOUT GRID */
+/* ==========================================================================
+   ILUSTRAÇÕES EM CSS PURO (SUBSTITUTOS DAS FOTOS)
+   ========================================================================== */
+.graphic-placeholder {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.2);
+}
+
+/* Ilustração Geográfica (Projeto 1) */
+.geo-graphic {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    border: 2px solid #4a5568;
+}
+.geo-graphic::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 1px dashed rgba(82, 183, 136, 0.4);
+    border-radius: 50%;
+}
+.sat-orbit {
+    width: 30px;
+    height: 30px;
+    background-color: #52b788;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px #52b788;
+}
+
+/* Ilustração do Aplicativo (Projeto 2) */
+.app-graphic {
+    background: linear-gradient(135deg, #4361ee 0%, #3f37c9 100%);
+    border: 2px solid #3f37c9;
+}
+.mock-phone {
+    width: 60px;
+    height: 90px;
+    background: #1a202c;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #ffffff;
+}
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #f8fafc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-alert-btn {
+    background: #ef4444;
+    color: white;
+    font-size: 0.5rem;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Ilustração Climática (Projeto 3) */
+.weather-graphic {
+    background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+    border: 2px solid #0077b6;
+}
+.weather-sun {
+    width: 35px;
+    height: 35px;
+    background: #ffb703;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 42%;
+    box-shadow: 0 0 20px #ffb703;
+}
+.weather-cloud {
+    width: 50px;
+    height: 25px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.graphic-placeholder span {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   LAYOUT GRID E COMENTÁRIOS DE SUPORTE
+   ========================================================================== */
 .grid-2 {
     display: table;
     width: 100%;
     table-layout: fixed;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .grid-2 > div {
     display: table-cell;
     width: 50%;
     vertical-align: top;
-    padding-right: 20px;
+    padding-right: 25px;
 }
 
 .grid-2 > div:last-child {
     padding-right: 0;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
-/* CALLOUTS (CAIXAS DE DESTAQUE) */
+/* CAIXAS DE RELEVÂNCIA (CALLOUTS) */
 .callout {
-    padding: 20px;
+    padding: 22px;
     border-radius: 8px;
-    height: 100%;
-    border-left: 4px solid;
+    border-left: 5px solid;
+    font-size: 0.95rem;
 }
 
 .callout p {
     margin-bottom: 0;
     font-style: italic;
+    color: #2d3748;
 }
 
 .callout.warning {
     background-color: #fffaf0;
     border-color: #dd6b20;
-    color: #9c4221;
 }
 
 .callout.success {
     background-color: #f0fff4;
     border-color: #38a169;
-    color: #22543d;
 }
 
 .callout.info {
     background-color: #ebf8ff;
     border-color: #3182ce;
-    color: #2a4365;
 }
 
-/* CRONOGRAMA / TIMELINE */
+/* ==========================================================================
+   ELEMENTOS DE FLUXO E CRONOGRAMAS (CRIAÇÕES GRÁFICAS)
+   ========================================================================== */
+/* Linha do Tempo / Passos */
 .timeline {
-    margin: 25px 0;
+    margin: 30px 0 10px 0;
     position: relative;
-    border-left: 2px solid #e2e8f0;
-    padding-left: 20px;
+    border-left: 3px solid #e2e8f0;
+    padding-left: 25px;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .timeline-item:last-child {
@@ -188,31 +307,33 @@ p {
 
 .timeline-icon {
     position: absolute;
-    left: -31px;
+    left: -37px;
     top: 0;
-    background: #2e7d32;
+    background: #2d6a4f;
     color: white;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     text-align: center;
-    font-size: 0.75rem;
-    line-height: 20px;
+    font-size: 0.85rem;
+    line-height: 24px;
     font-weight: bold;
+    box-shadow: 0 0 0 4px #ffffff;
 }
 
 .timeline-content {
     background: #f8fafc;
-    padding: 15px;
-    border-radius: 6px;
+    padding: 20px;
+    border-radius: 8px;
     border: 1px solid #edf2f7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
-/* ESQUEMA / FLUXOGRAMA */
+/* Fluxograma Horizontal */
 .flowchart {
     display: table;
     width: 100%;
-    margin: 30px 0;
+    margin: 35px 0;
     table-layout: fixed;
     text-align: center;
 }
@@ -220,56 +341,61 @@ p {
 .flow-node {
     display: table-cell;
     background: #f8fafc;
-    border: 2px solid #2e7d32;
+    border: 2px solid #2d6a4f;
     border-radius: 8px;
-    padding: 15px;
+    padding: 15px 10px;
     vertical-align: middle;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
 .flow-arrow {
     display: table-cell;
-    width: 40px;
-    font-size: 1.5rem;
-    color: #2e7d32;
+    width: 35px;
+    font-size: 1.6rem;
+    color: #2d6a4f;
     vertical-align: middle;
     font-weight: bold;
 }
 
 .node-title {
     font-weight: bold;
-    color: #1e4620;
-    margin-bottom: 5px;
+    color: #1b4332;
+    margin-bottom: 6px;
     font-size: 0.95rem;
 }
 
 .node-desc {
     font-size: 0.8rem;
-    color: #718096;
-    line-height: 1.3;
+    color: #4a5568;
+    line-height: 1.4;
 }
 
-/* LISTAS DE ATRIBUTOS DO APP */
+/* Caixa com Recursos do Aplicativo */
 .app-features {
     background-color: #f7fafc;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 25px;
     border: 1px dashed #cbd5e0;
 }
 
 .app-features h4 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .app-features ul {
     list-style-type: none;
-    padding-left: 5px;
 }
 
 .app-features li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 25px;
+    color: #4a5568;
+}
+
+.app-features li:last-child {
+    margin-bottom: 0;
 }
 
 .app-features li::before {
@@ -280,12 +406,12 @@ p {
     font-weight: bold;
 }
 
-/* MATEMÁTICA E INSTRUMENTOS */
+/* Cards das Ferramentas Climáticas */
 .instruments-grid {
     display: table;
     width: 100%;
     table-layout: fixed;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 .instrument-card {
@@ -294,70 +420,77 @@ p {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
-    margin: 0 10px;
 }
 
-/* Hack para espaçamento de células em tabelas simulando grid */
-.instrument-card:first-child { border-right: 10px solid transparent; }
-.instrument-card:nth-child(2) { border-right: 5px solid transparent; border-left: 5px solid transparent; }
-.instrument-card:last-child { border-left: 10px solid transparent; }
+.instrument-card:first-child { border-right: 15px solid transparent; }
+.instrument-card:nth-child(2) { border-right: 7px solid transparent; border-left: 7px solid transparent; }
+.instrument-card:last-child { border-left: 15px solid transparent; }
 
 .instrument-card h5 {
-    color: #1e4620;
-    font-size: 1.05rem;
+    color: #1b4332;
+    font-size: 1.1rem;
     margin-bottom: 10px;
-    border-bottom: 2px solid #81c784;
-    padding-bottom: 5px;
+    border-bottom: 2px solid #52b788;
+    padding-bottom: 6px;
 }
 
 .instrument-card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-bottom: 0;
+    color: #4a5568;
 }
 
+/* Seções de Cálculos Matemáticos */
 .math-box {
     background: #edf2f7;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .formula {
     background: #ffffff;
-    padding: 15px;
+    padding: 18px;
     border-radius: 6px;
     text-align: center;
     font-weight: bold;
-    color: #2c5282;
+    color: #2b6cb0;
     border: 1px solid #cbd5e0;
-    margin-top: 10px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    font-size: 1.05rem;
 }
 
-/* DICA DE OURO BANNER */
+/* Dica de Ouro Master (Banner Final) */
 .gold-advice {
     background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%);
     border: 2px solid #f6ad55;
-    padding: 30px;
+    padding: 35px;
     border-radius: 12px;
     margin: 40px 0;
+    box-shadow: 0 4px 12px rgba(221, 107, 32, 0.05);
 }
 
 .gold-advice h3 {
     color: #dd6b20;
     margin-top: 0;
+    font-size: 1.4rem;
 }
 
 .gold-advice p {
     color: #744210;
     margin-bottom: 0;
+    font-size: 1.05rem;
 }
 
-/* FOOTER */
+/* ==========================================================================
+   FOOTER / RODAPÉ
+   ========================================================================== */
 footer {
-    background-color: #1e4620;
-    color: #a0aec0;
+    background-color: #1b4332;
+    color: #cbd5e0;
     text-align: center;
-    padding: 25px 0;
-    font-size: 0.9rem;
-    margin-top: 6px;
+    padding: 30px 0;
+    font-size: 0.95rem;
+    border-top: 4px solid #52b788;
 }
